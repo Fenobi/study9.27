@@ -11,11 +11,11 @@ void test1()
 	SListPushFront(&ln, 4);
 	//SListPopFront(&ln);
 
-	SListRevise(SListFind(ln, 2), 10);//4 1 10 3
-	//SListInsertFront(&ln, SListFind(ln, 3), 6);//4 1 10 6 3
-	//SListInsertAfter(SListFind(ln, 1), 9);//4 1 9 10 6 3
-	//SListEase(&ln, SListFind(ln, 4));//1 9 10 6 3
-	//SListEaseAfter(SListFind(ln, 1));
+	SListRevise(SListFind(ln, 2), 10);
+	SListInsertFront(&ln, SListFind(ln, 3), 6);//4 1 10 6 3
+	SListInsertAfter(SListFind(ln, 1), 9);//4 1 9 10 6 3
+	SListEase(&ln, SListFind(ln, 4));//1 9 10 6 3
+	SListEaseAfter(SListFind(ln, 1));
 
 	SListPrint(ln);
 	
